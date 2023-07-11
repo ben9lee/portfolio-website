@@ -14,7 +14,6 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -39,15 +38,35 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius, ut exercitationem a distinctio consequatur enim nulla ipsum odio ducimus rem neque est, temporibus illum itaque, sapiente nostrum voluptatum atque!</p>
 
                     <div class="sections">
-                        <p class="section-links active-link">Skills</p>
-                        <p class="section-links">Experience</p>
-                        <p class="section-links">Education</p>
+                        <p class="section-links active-link" onclick="opensection('skills')">Skills</p>
+                        <p class="section-links" onclick="opensection('experience')">Experience</p>
+                        <p class="section-links" onclick="opensection('education')">Education</p>
+                        <p class="section-links" onclick="opensection('interests')">Interests</p>
                     </div>
-                    <div class="section-contents">
+                    <div class="section-contents active-section" id="skills">
                         <ul>
-                            <li><span>UI?UX</span><br>Designing Web/App Interfaces</li>
-                            <li><span>UI?UX</span><br>Designing Web/App Interfaces</li>
-                            <li><span>UI?UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Languages</span><br>C++ &nbsp JavaScript &nbsp  HTML &nbsp CSS</li>
+                        </ul>
+                    </div>
+                    <div class="section-contents" id="experience">
+                        <ul>
+                            <li><span>Experiences</span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati minima, modi harum repudiandae quidem culpa porro c</li>
+                        </ul>
+                    </div>
+                    <div class="section-contents" id="education">
+                        <ul>
+                            <li><span>2015-2021</span><br>Harvard-Westlake School (High School Diploma)</li>
+                            <li><span>2021-NOW</span><br>University of Michigan LSA - Computer Science (BS)</li>
+
+                        </ul>
+                    </div>
+                    <div class="section-contents" id="interests">
+                        <ul>
+                            <li><span>Sports</span><br>Harvard-Westlake School (High School Diploma)</li>
+                            <li><span>Music</span><br>University of Michigan LSA - Computer Science (BS)</li>
+                            <li><span>Fashion</span><br>University of Michigan LSA - Computer Science (BS)</li>
+
+
                         </ul>
                     </div>
                 </div>
@@ -55,6 +74,31 @@
             </div>
         </div>
     </div>
+
+    <!-- Portfolo -->
+    <div id="portfolio">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <script>
+
+        var sectionlinks = document.getElementsByClassName("section-links");
+        var sectioncontents = document.getElementsByClassName("section-contents");
+
+        function opensection(sectionname){
+            for(sectionlink of sectionlinks){
+                sectionlink.classList.remove("active-link");
+            }
+            for(sectioncontent of sectioncontents){
+                sectioncontent.classList.remove("active-section");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(sectionname).classList.add("active-section");
+        }
+
+    </script>
 
 
 </body>
