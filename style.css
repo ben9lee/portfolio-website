@@ -149,3 +149,16 @@ li a:hover{
     display: block;
 }
 
+
+/* Portfolio */
+
+#portfolio{
+    padding: 50px 0;
+}
+.sub-title{
+    font-size: 2vw;
+}
+.work-list{
+    display: flex;
+    
+}
